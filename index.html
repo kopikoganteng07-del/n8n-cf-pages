@@ -284,8 +284,8 @@ amp-accordion section > h2 {
   border-radius: 8px;
 }
 
-amp-accordion [expanded] h2::after { content: "−"; }
-amp-accordion h2::after {
+amp-accordion section[expanded] > h2::after { content: "−"; }
+amp-accordion section > h2::after {
   content: "+";
   font-size: 16px;
 }
