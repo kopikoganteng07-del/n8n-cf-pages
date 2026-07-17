@@ -153,6 +153,8 @@ body {
   border-radius: 8px;
   padding: 8px 14px;
   text-align: center;
+  display: block;
+  text-decoration: none;
 }
 
 .badge-join span {
@@ -269,7 +271,7 @@ amp-accordion section {
 
 amp-accordion section > h2 {
   cursor: pointer;
-  background-color: black;
+  background-color: #0b0000;
   padding-right: 20px;
   border: 1px solid #dfdfdf;
   font-size: 13px;
@@ -296,6 +298,13 @@ amp-accordion div[role="region"] {
   text-align: justify;
 }
 
+amp-accordion div[role="region"] h1,
+amp-accordion div[role="region"] h2,
+amp-accordion div[role="region"] h3,
+amp-accordion div[role="region"] h4 {
+  text-align: center;
+}
+
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.78; }
@@ -310,7 +319,6 @@ amp-accordion div[role="region"] {
 
   <div class="brand-row">
     <amp-img src="${logoUrl}" alt="${keyword} logo" width="32" height="32" layout="fixed"></amp-img>
-    <span class="brand-name">${keyword}</span>
   </div>
 
   <a href="${ctaUrl}" target="_blank" rel="noopener noreferrer" class="banner-link">
@@ -323,7 +331,7 @@ amp-accordion div[role="region"] {
       <p class="badge-name">${keyword}</p>
       <p class="badge-sub">Brand unggulan</p>
     </div>
-    <div class="badge-join"><span>JOIN</span></div>
+    <a href="${ctaUrl}" target="_blank" rel="noopener noreferrer" class="badge-join"><span>JOIN</span></a>
   </div>
 
   <div class="cta-grid">
@@ -350,7 +358,7 @@ amp-accordion div[role="region"] {
     </div>
   </div>
 
-  <a href="${ctaUrl}" target="_blank" rel="noopener noreferrer" class="kw-btn"><span>${keyword}</span></a>
+  <div class="kw-btn"><span>${keyword}</span></div>
 
   <div class="pay-strip">
     <p class="pay-lbl">Metode: <span class="pay-val">QRIS | Ewallet | VA</span></p>
