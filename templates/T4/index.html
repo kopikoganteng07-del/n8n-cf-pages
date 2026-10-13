@@ -1481,6 +1481,28 @@
             transform: scale(1.04)
         }
 
+        .game-card:not(:has(amp-img)) {
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center
+        }
+
+        .game-card .game-symbol { font-size: 42px; line-height: 1 }
+        .game-card strong { color: #ffd45a; font-size: 17px; letter-spacing: 1.2px }
+        .game-card small { color: #f2d6a0; font-size: 11px }
+        .game-card-zeus { background: linear-gradient(145deg,#301760,#080319 60%,#c87b08) }
+        .game-card-mahjong { background: linear-gradient(145deg,#0f5b37,#04150d 60%,#bd8514) }
+        .game-card-star { background: linear-gradient(145deg,#6b164e,#180314 60%,#725bd7) }
+        .game-card-athena { background: linear-gradient(145deg,#254c71,#06101b 60%,#bd8a32) }
+        .game-card-sugar { background: linear-gradient(145deg,#b42464,#2c061b 60%,#16a2b0) }
+        .game-card-gatot { background: linear-gradient(145deg,#79150b,#1d0301 60%,#e08d11) }
+
         .article-frame {
             position: relative;
             margin: 1.35rem 0.75rem 0;
@@ -2296,29 +2318,23 @@
         <div class="game-section">
             <div class="game-section-title">Game Gacor Hari Ini</div>
             <div class="game-grid">
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Zeus"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-zeus" aria-label="Zeus">
+                    <span class="game-symbol">⚡</span><strong>ZEUS</strong><small>Petir Kemenangan</small>
                 </a>
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Mahjong Wins"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-mahjong" aria-label="Mahjong Wins">
+                    <span class="game-symbol">🀄</span><strong>MAHJONG</strong><small>Ubin Keberuntungan</small>
                 </a>
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Starlight Princess"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-star" aria-label="Starlight Princess">
+                    <span class="game-symbol">⭐</span><strong>STARLIGHT</strong><small>Cahaya Bintang</small>
                 </a>
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Athena"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-athena" aria-label="Athena">
+                    <span class="game-symbol">🛡️</span><strong>ATHENA</strong><small>Perisai Dewi</small>
                 </a>
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Sugar Rush"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-sugar" aria-label="Sugar Rush">
+                    <span class="game-symbol">🍭</span><strong>SUGAR RUSH</strong><small>Manis Berlimpah</small>
                 </a>
-                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card">
-                    <amp-img src="${bannerUrl}" width="472" height="400"
-                        layout="responsive" alt="Gatotkaca"></amp-img>
+                <a href="${ctaUrl}" rel="nofollow noopener noreferrer" target="_blank" class="game-card game-card-gatot" aria-label="Gatotkaca">
+                    <span class="game-symbol">🔥</span><strong>GATOTKACA</strong><small>Kekuatan Legenda</small>
                 </a>
             </div>
         </div>
