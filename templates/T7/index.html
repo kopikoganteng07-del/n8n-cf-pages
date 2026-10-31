@@ -1,0 +1,668 @@
+<!doctype html>
+<html ⚡ lang="id">
+<head>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <!-- Metadata dinamis -->
+  <title>${titleFinal}</title>
+  <meta name="description" content="${descFinal}">
+  <meta name="author" content="${keyword}">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0d0d0d">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:title" content="${titleFinal}">
+  <meta property="og:description" content="${descFinal}">
+  <meta property="og:image" content="${bannerUrl}">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="${keyword}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="${canonicalUrl}">
+  <meta name="twitter:title" content="${titleFinal}">
+  <meta name="twitter:description" content="${descFinal}">
+  <meta name="twitter:image" content="${bannerUrl}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="${canonicalUrl}">
+  <link rel="icon" type="image/webp" href="${faviconUrl}">
+  <link rel="apple-touch-icon" href="${faviconUrl}">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "${pagesUrl}/#website",
+        "name": "${keyword}",
+        "url": "${canonicalUrl}",
+        "description": "${descFinal}",
+        "inLanguage": "id-ID",
+        "datePublished": "${datePublished}",
+        "dateModified": "${dateModified}"
+    }
+  </script>
+
+  <!-- AMP Boilerplate -->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+  <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <!-- AMP Runtime -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+
+  <style amp-custom>
+
+    /* 1. Reset & Base - Black Gold Elegant */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { -webkit-tap-highlight-color: transparent; outline: none; }
+    html { background-color: #0a0a0a; }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #0a0a0a;
+      background-image: linear-gradient(160deg, #0d0d0d 0%, #0a0a0a 50%, #0d0d0d 100%);
+      color: #e30808;
+      min-height: 100vh;
+    }
+
+    /* 2. Site Container */
+    .site-container {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      background-color: #111111;
+      background-image:
+        linear-gradient(160deg, #1a1a1a 0%, #111111 35%, #222222 70%, #111111 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-left: 1px solid #d4af3744;
+      border-right: 1px solid #d4af3744;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* 3. APK Header */
+    .apk-header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      border-bottom: 2px solid #d4af3766;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .apk-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af3708' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .apk-left { display: flex; align-items: center; gap: 10px; position: relative; z-index: 1; }
+    .apk-logo-wrap { width: 46px; height: 46px; flex-shrink: 0; }
+    .apk-text h3 { font-size: 15px; font-weight: 800; color: #e30808; letter-spacing: 0.5px; }
+    .apk-text p { font-size: 10px; color: #b8942b; margin-top: 1px; }
+    .btn-download {
+      background: linear-gradient(135deg, #e30808, #e30808);
+      color: #0d0d0d;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      display: block;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* 4. Main Nav */
+    .main-nav {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      border-bottom: 1px solid #e3080866;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      height: 52px;
+    }
+    .nav-logo { flex: 1; height: 42px; display: flex; align-items: center; }
+    .nav-menu-btn {
+      width: 36px; height: 36px;
+      background: #2a2a2a;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .nav-menu-btn span { display: block; width: 20px; height: 2px; background: #e30808; border-radius: 2px; }
+
+    /* 5. Ticker */
+    .ticker-bar {
+      background: linear-gradient(90deg, #1a1a1a, #2a2a2a, #1a1a1a);
+      border-top: 1px solid #d4af3766;
+      border-bottom: 1px solid #d4af3766;
+      display: flex;
+      align-items: center;
+      padding: 6px 0;
+      overflow: hidden;
+    }
+    .ticker-icon { padding: 0 8px; border-right: 1px solid #d4af3755; flex-shrink: 0; display: flex; align-items: center; }
+    .ticker-wrap { overflow: hidden; flex: 1; }
+    .ticker-text {
+      display: inline-block;
+      font-size: 11px;
+      color: #e30808;
+      font-weight: 600;
+      white-space: nowrap;
+      animation: ticker-scroll 20s linear infinite;
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(100vw); }
+      100% { transform: translateX(-200%); }
+    }
+
+    /* 6. Banner */
+    .banner-section { width: 100%; }
+    .banner-slide { position: relative; width: 100%; }
+    .banner-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(17,17,17,0.75));
+      padding: 12px;
+    }
+    .banner-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #e30808, #e30808);
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
+    .banner-title { font-size: 14px; font-weight: 800; color: #e30808; }
+
+    /* 7. Category */
+    .category-section { padding: 10px 4px; background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%); }
+    .category-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 6px;
+      padding: 4px 6px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .category-scroll::-webkit-scrollbar { display: none; }
+    .category-item { flex: 0 0 70px; display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; }
+    .category-icon-wrap {
+      width: 60px; height: 60px;
+      background: linear-gradient(135deg, #2a2a2a, #444444);
+      border-radius: 14px;
+      border: 1.5px solid #d4af3744;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .category-icon-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(180deg, rgba(212,175,55,0.14), transparent);
+      border-radius: 14px 14px 0 0;
+      pointer-events: none;
+    }
+    .category-label { font-size: 10px; color: #b8942b; font-weight: 600; text-align: center; white-space: nowrap; }
+    .category-item.active .category-icon-wrap { border-color: #e30808; }
+    .category-item.active .category-label { color: #e30808; }
+
+    /* 8. Promo Strip */
+    .promo-strip {
+      background: linear-gradient(90deg, #1a1a1a, #e30808, #1a1a1a);
+      background-size: 200% 100%;
+      animation: promo-anim 3s ease infinite;
+      padding: 7px 12px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+    @keyframes promo-anim {
+      0%, 100% { background-position: 0% 0%; }
+      50%       { background-position: 100% 0%; }
+    }
+
+    /* 9. Button Section */
+    .btn-section { padding: 16px 12px; background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%); }
+    .btn-row { display: flex; gap: 10px; }
+    .btn-row + .btn-row { margin-top: 10px; }
+    .btn-action {
+      flex: 1;
+      display: block;
+      text-align: center;
+      padding: 15px 8px;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      border-radius: 14px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      border-top: 1px solid rgba(212,175,55,0.3);
+    }
+    .btn-action::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 48%;
+      background: linear-gradient(180deg, rgba(212,175,55,0.18) 0%, transparent 100%);
+      border-radius: 14px 14px 0 0;
+      pointer-events: none;
+    }
+    .btn-daftar  { background: linear-gradient(180deg, #e30808 0%, #e30808 100%); color: #ffffff; border-bottom-color: #8a6b0b; }
+    .btn-login   { background: linear-gradient(180deg, #e30808 0%, #e30808 100%); color: #ffffff; border-bottom-color: #8a6b0b; }
+    .btn-rtp     { background: linear-gradient(180deg, #e30808 0%, #e30808 100%); color: #ffffff; border-bottom-color: #8a6b0b; }
+    .btn-altlink { background: linear-gradient(180deg, #e30808 0%, #e30808 100%); color: #ffffff; border-bottom-color: #8a6b0b; }
+
+    /* 10. Social Links */
+    .social-section { padding: 12px; background: #111111; }
+    .social-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .social-item { display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; text-decoration: none; }
+    .social-icon-wrap { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+    .social-icon-wrap.qris { background: linear-gradient(135deg, #2a2a2a, #444444); border: 1px solid #d4af3744; }
+    .social-icon-wrap.fb   { background: linear-gradient(135deg, #2a2a2a, #444444); border: 1px solid #d4af3744; }
+    .social-icon-wrap.tg   { background: linear-gradient(135deg, #2a2a2a, #444444); border: 1px solid #d4af3744; }
+    .social-icon-wrap.wa   { background: linear-gradient(135deg, #2a2a2a, #444444); border: 1px solid #d4af3744; }
+    .social-label { font-size: 10px; color: #b8942b; font-weight: 600; text-align: center; }
+
+    /* 11. Game RTP Section */
+    .games-section {
+      background: #111111;
+      padding: 14px 12px;
+    }
+    .games-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .games-header-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #e30808;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .games-header-title span { color: #ffffff; }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #e30808;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .live-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: #0d0d0d;
+      border-radius: 50%;
+      animation: blink 1s ease infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* Game Card */
+    .game-card {
+      background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+      border: 1px solid #d4af3744;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .game-card-img {
+      width: 100%;
+      display: block;
+      position: relative;
+    }
+    .game-hot-badge {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      background: linear-gradient(135deg, #e30808, #e30808);
+      color: #0d0d0d;
+      font-size: 8px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+    .game-card-body {
+      padding: 9px 10px 11px;
+    }
+    .game-name {
+      font-size: 10px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .game-provider {
+      font-size: 9px;
+      color: #b8942b;
+      margin-bottom: 8px;
+    }
+
+    /* RTP Row */
+    .game-rtp-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .game-rtp-label {
+      font-size: 9px;
+      color: #e30808;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .game-rtp-pct {
+      font-size: 11px;
+      font-weight: 900;
+      color: #e30808;
+    }
+
+    /* Loading Bar */
+    .game-bar-track {
+      width: 100%;
+      height: 7px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+    .game-bar-fill {
+      height: 100%;
+      border-radius: 10px;
+      animation: bar-grow 1.8s ease-out forwards;
+    }
+    @keyframes bar-grow {
+      from { width: 0%; }
+    }
+    /* Bar color variants — all gold */
+    .bar-gold   { background: linear-gradient(90deg, #e30808, #f5d76e); width: 97%; }
+    .bar-pink   { background: linear-gradient(90deg, #e30808, #f5d76e); width: 95%; }
+    .bar-blue   { background: linear-gradient(90deg, #e30808, #f5d76e); width: 93%; }
+    .bar-green  { background: linear-gradient(90deg, #e30808, #f5d76e); width: 96%; }
+
+    /* 12. Copyright Footer */
+    .copyright-footer { background: #0a0a0a; border-top: 1px solid #d4af3744; padding: 16px 12px 12px; text-align: center; }
+    .copyright-logo { font-size: 18px; font-weight: 900; color: #e30808; letter-spacing: 2px; margin-bottom: 6px; }
+    .copyright-tagline { font-size: 10px; color: #b8942b; margin-bottom: 10px; letter-spacing: 0.5px; }
+    .copyright-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 10px; margin-bottom: 12px; }
+    .copyright-links a { font-size: 10px; color: #e30808; text-decoration: none; }
+    .copyright-divider { height: 1px; background: linear-gradient(90deg, transparent, #d4af3744, transparent); margin-bottom: 10px; }
+    .copyright-text { font-size: 10px; color: #777777; line-height: 1.6; }
+    .copyright-text strong { color: #e30808; }
+
+    /* 13. Section Divider */
+    .section-divider { height: 5px; background: linear-gradient(90deg, #1a1a1a, #e30808, #1a1a1a); opacity: 0.5; }
+
+    /* 14. Bottom Nav */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+      border-top: 1px solid #d4af3755;
+      display: flex;
+      padding: 6px 0 8px;
+      z-index: 100;
+    }
+    .bottom-nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer; text-decoration: none; }
+    .bottom-nav-label { font-size: 10px; color: #b8942b; font-weight: 600; }
+    .bottom-nav-item.active .bottom-nav-label { color: #d4af37; }
+
+    /* 15. Utility */
+    .bottom-spacer { height: 64px; }
+
+
+    .category-glyph { font-size: 30px; color: #e30808; line-height: 44px; font-weight: 800; }
+    .bottom-glyph { font-size: 22px; color: #e30808; line-height: 26px; }
+    .article-section { padding: 18px 16px; background:#111; color:#ddd; line-height:1.7; }
+    .article-section h1 { color:#e30808; font-size:20px; margin-bottom:12px; line-height:1.35; }
+    .article-content h2 { color:#d4af37; font-size:17px; margin:18px 0 8px; }
+    .article-content p { margin:0 0 12px; }
+    .article-content ul { padding-left:20px; margin-bottom:12px; }
+    @media (min-width: 900px) { body { background: radial-gradient(circle at top,#331010 0,#090909 60%); } .site-container { box-shadow:0 0 45px rgba(227,8,8,.18); } }
+  </style>
+</head>
+<body>
+
+<div class="site-container">
+
+  <!-- Main Nav -->
+  <div class="main-nav">
+    <div class="nav-logo">
+      <amp-img src="${logoUrl}" width="150" height="42" layout="fixed" object-fit="contain" alt="Logo ${keyword}"></amp-img>
+    </div>
+    <div class="nav-menu-btn" role="button" aria-label="Buka Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- APK Header -->
+  <div class="apk-header">
+    <div class="apk-left">
+      <div class="apk-logo-wrap">
+        <amp-img src="${faviconUrl}" width="46" height="46" layout="fixed" object-fit="contain" alt="Ikon ${keyword}"></amp-img>
+      </div>
+      <div class="apk-text">
+        <h3>APK ${keyword}</h3>
+        <p>Akses Cepat dan Praktis</p>
+      </div>
+    </div>
+    <a href="${ctaUrl}" class="btn-download" rel="nofollow noopener" target="_blank">DOWNLOAD</a>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-icon">
+      <amp-img src="${faviconUrl}" width="16" height="16" layout="fixed" alt="Ikon ${keyword}"></amp-img>
+    </div>
+    <div class="ticker-wrap">
+      <span class="ticker-text">${descFinal}</span>
+    </div>
+  </div>
+
+  <!-- Banner Carousel -->
+  <div class="banner-section">
+    <amp-carousel width="1080" height="1080" layout="responsive" type="slides" autoplay delay="3500" loop>
+
+      <div class="banner-slide">
+        <amp-img src="${bannerUrl}"
+          width="1080" height="1080" layout="responsive" alt="Informasi Pilihan Hari Ini"></amp-img>
+      </div>
+
+      <div class="banner-slide">
+        <amp-img src="${bannerUrl}"
+          width="1080" height="1080" layout="responsive" alt="Jelajahi Konten Terbaru"></amp-img>
+      </div>
+
+      <div class="banner-slide">
+        <amp-img src="${bannerUrl}"
+          width="1080" height="1080" layout="responsive" alt="Akses Mudah dan Cepat"></amp-img>
+      </div>
+
+    </amp-carousel>
+  </div>
+
+  <!-- Category Icons -->
+  <div class="category-section">
+    <div class="category-scroll">
+
+      <div class="category-item active">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Beranda">⌂</span>
+        </div>
+        <span class="category-label">Beranda</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Slot">★</span>
+        </div>
+        <span class="category-label">Slot</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Casino">♠</span>
+        </div>
+        <span class="category-label">Casino</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Togel">#</span>
+        </div>
+        <span class="category-label">Togel</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Sport">⚽</span>
+        </div>
+        <span class="category-label">Sportsbook</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Tembak Ikan">◆</span>
+        </div>
+        <span class="category-label">Tembak Ikan</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Sambung Ayam">♞</span>
+        </div>
+        <span class="category-label">Sambung Ayam</span>
+      </div>
+
+      <div class="category-item">
+        <div class="category-icon-wrap">
+          <span class="category-glyph" aria-label="Arcade">✦</span>
+        </div>
+        <span class="category-label">Arcade</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- Promo Strip -->
+  <div class="promo-strip">
+    INFORMASI TERBARU &nbsp;|&nbsp; AKSES CEPAT &nbsp;|&nbsp; LAYANAN RESPONSIF
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-section">
+    <div class="btn-row">
+      <a href="${ctaUrl}" class="btn-action btn-daftar" rel="nofollow noopener" target="_blank">DAFTAR</a>
+      <a href="${ctaUrl}" class="btn-action btn-login" rel="nofollow noopener" target="_blank">LOGIN</a>
+    </div>
+    <div class="btn-row">
+      <a href="${ctaUrl}" class="btn-action btn-rtp" rel="nofollow noopener" target="_blank">🔴 RTP LIVE</a>
+      <a href="${ctaUrl}" class="btn-action btn-altlink" rel="nofollow noopener" target="_blank">🔗 LINK ALTERNATIF</a>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+
+  <!-- Copyright Footer -->
+<div class="section-divider"></div>
+
+
+  <section class="article-section" aria-label="Informasi ${keyword}">
+    <h1>${titleFinal}</h1>
+    <div class="article-content">${cleanArtikel}</div>
+  </section>
+
+<footer class="copyright-footer">
+
+  <div class="copyright-logo">
+
+<div class="copyright-divider"></div>
+
+<div class="copyright-text">
+    &copy; ${footerYear} <strong>${keyword}</strong> X Portal Digital.
+</div>
+
+  <div class="bottom-spacer"></div>
+
+</div><!-- /.site-container -->
+
+<!-- Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="${ctaUrl}" class="bottom-nav-item" rel="nofollow">
+    <span class="bottom-glyph" aria-label="Kembali">↩</span>
+    <span class="bottom-nav-label">Daftar</span>
+  </a>
+  <a href="${ctaUrl}" class="bottom-nav-item" rel="nofollow">
+    <span class="bottom-glyph" aria-label="Akun Saya">●</span>
+    <span class="bottom-nav-label">Akun Saya</span>
+  </a>
+  <a href="${ctaUrl}" class="bottom-nav-item" rel="nofollow">
+    <span class="bottom-glyph" aria-label="Promosi">◆</span>
+    <span class="bottom-nav-label">Promosi</span>
+  </a>
+  <a href="${ctaUrl}" class="bottom-nav-item" rel="nofollow">
+    <span class="bottom-glyph" aria-label="Live Chat">✉</span>
+    <span class="bottom-nav-label">Live Chat</span>
+  </a>
+  <a href="${ctaUrl}" class="bottom-nav-item active" rel="nofollow">
+    <span class="bottom-glyph" aria-label="Beranda">⌂</span>
+    <span class="bottom-nav-label">Beranda</span>
+  </a>
+</nav>
+
+</body>
+</html>
